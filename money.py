@@ -76,8 +76,10 @@ class Money:
         """
         if self.currency == other.currency:
             self.amount += other.amount
-        else: raise DifferentCurrencyError
-        return self
+            # return self
+        else: 
+            raise DifferentCurrencyError
+    
 
     def sub(self, other):
         """
@@ -86,7 +88,8 @@ class Money:
         """
         if self.currency == other.currency:
             self.amount -= other.amount
-        else: raise DifferentCurrencyError
+        else: 
+            raise DifferentCurrencyError
         return self
 
     def mul(self, multiplier):
